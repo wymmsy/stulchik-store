@@ -11,8 +11,8 @@
   <header class="header">
     <div class="header__inner">
       <p class="header__logo">СТЛЧК</p>
-      <button class="header__cart-toggle" type="button">
-        Корзина <span class="header__cart-count">0</span>
+      <button class="header__cart-toggle" id="cartToggle" type="button">
+        Корзина <span class="header__cart-count" id="cartCount">0</span>
       </button>
     </div>
   </header>
@@ -40,6 +40,69 @@
       </ul>
     </section>
   </main>
+
+  <aside class="cart-panel" id="cartPanel" hidden aria-labelledby="cart-heading">
+    <div class="cart-panel__header">
+      <h2 id="cart-heading">Корзина</h2>
+      <button class="cart-panel__close" id="cartClose" type="button" aria-label="Закрыть корзину">×</button>
+    </div>
+
+    <ul class="cart-panel__list" id="cartList">
+      <li class="cart-item">
+        <img class="cart-item__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%23e5e5e5'/%3E%3C/svg%3E" alt="" width="56" height="56">
+        <div class="cart-item__info">
+          <p class="cart-item__title">Название товара</p>
+          <p class="cart-item__price">0 ₽</p>
+        </div>
+        <div class="cart-item__quantity">
+          <button type="button" class="cart-item__decrease" aria-label="Уменьшить количество">−</button>
+          <span class="cart-item__count">1</span>
+          <button type="button" class="cart-item__increase" aria-label="Увеличить количество">+</button>
+        </div>
+        <button type="button" class="cart-item__remove" aria-label="Удалить товар">×</button>
+      </li>
+    </ul>
+
+    <div class="cart-panel__footer">
+      <p class="cart-panel__total">Итого: <span id="cartTotalValue">0 ₽</span></p>
+      <button class="cart-panel__checkout" id="checkoutBtn" type="button">Оформить заказ</button>
+    </div>
+  </aside>
+
+  <div class="overlay" id="overlay" hidden></div>
+
+  <dialog class="order-modal" id="orderModal" aria-labelledby="order-heading">
+    <form class="order-form" id="orderForm">
+      <h2 id="order-heading">Оформление заказа</h2>
+
+      <p class="order-form__success" id="orderSuccess" hidden>Заказ создан!</p>
+
+      <label class="order-form__field">
+        <span>Имя</span>
+        <input type="text" name="firstName" required>
+      </label>
+
+      <label class="order-form__field">
+        <span>Фамилия</span>
+        <input type="text" name="lastName" required>
+      </label>
+
+      <label class="order-form__field">
+        <span>Адрес доставки</span>
+        <input type="text" name="address" required>
+      </label>
+
+      <label class="order-form__field">
+        <span>Контактный номер телефона</span>
+        <input type="tel" name="phone" required>
+      </label>
+
+      <div class="order-form__actions">
+        <button type="button" class="order-form__cancel" id="orderCancel">Отмена</button>
+        <button type="submit" class="order-form__submit">Создать заказ</button>
+      </div>
+    </form>
+  </dialog>
 
   <footer class="footer">
     <p>© 2026 СТЛЧК</p>
