@@ -30,21 +30,7 @@
       <button class="cart-panel__close" id="cartClose" type="button" aria-label="Закрыть корзину">×</button>
     </div>
 
-    <ul class="cart-panel__list" id="cartList">
-      <li class="cart-item">
-        <img class="cart-item__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Crect width='120' height='120' fill='%23e5e5e5'/%3E%3C/svg%3E" alt="" width="56" height="56">
-        <div class="cart-item__info">
-          <p class="cart-item__title">Название товара</p>
-          <p class="cart-item__price">0 ₽</p>
-        </div>
-        <div class="cart-item__quantity">
-          <button type="button" class="cart-item__decrease" aria-label="Уменьшить количество">−</button>
-          <span class="cart-item__count">1</span>
-          <button type="button" class="cart-item__increase" aria-label="Увеличить количество">+</button>
-        </div>
-        <button type="button" class="cart-item__remove" aria-label="Удалить товар">×</button>
-      </li>
-    </ul>
+    <ul class="cart-panel__list" id="cartList"></ul>
 
     <div class="cart-panel__footer">
       <p class="cart-panel__total">Итого: <span id="cartTotalValue">0 ₽</span></p>
@@ -93,5 +79,6 @@
 
   <script src="js/data.js" defer></script>
   <script src="js/render.js" defer></script>
+  <script src="js/cart.js" defer></script>
 </body>
 </html>
