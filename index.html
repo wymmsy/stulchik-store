@@ -20,24 +20,7 @@
   <main class="main">
     <section class="catalog" aria-labelledby="catalog-heading">
       <h1 id="catalog-heading">Каталог стульев</h1>
-      <ul class="catalog__grid">
-        <li class="product-card">
-          <article>
-            <img class="product-card__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect width='200' height='200' fill='%23e5e5e5'/%3E%3C/svg%3E" alt="" width="200" height="200">
-            <h2 class="product-card__title">Название товара</h2>
-            <p class="product-card__price">0 ₽</p>
-            <button class="product-card__add" type="button">Добавить в корзину</button>
-          </article>
-        </li>
-        <li class="product-card">
-          <article>
-            <img class="product-card__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect width='200' height='200' fill='%23e5e5e5'/%3E%3C/svg%3E" alt="" width="200" height="200">
-            <h2 class="product-card__title">Название товара</h2>
-            <p class="product-card__price">0 ₽</p>
-            <button class="product-card__add" type="button">Добавить в корзину</button>
-          </article>
-        </li>
-      </ul>
+      <ul class="catalog__grid" id="productGrid"></ul>
     </section>
   </main>
 
@@ -109,5 +92,6 @@
   </footer>
 
   <script src="js/data.js" defer></script>
+  <script src="js/render.js" defer></script>
 </body>
 </html>
